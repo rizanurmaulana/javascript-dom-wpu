@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suwit Jawa</title>
+</head>
+<body>
+    <script>
+        let tanya = true;
+        
+        while(tanya) {
+            
+            let player = prompt('Pilih : gajah, orang, semut');
+    
+            let computer = Math.random();
+    
+            if(computer < 0.33) {
+                computer = 'gajah';
+            } else if(computer < 0.66) {
+                computer = 'orang';
+            } else {
+                computer = 'semut';
+            }
+    
+            let hasil;
+            if(player == computer) {
+                hasil = 'seri!';
+            } else if(player == 'gajah') {
+                hasil = (computer == 'orang') ? 'menang!' : 'kalah!';
+            } else if (player == 'orang') {
+                hasil = (computer == 'semut') ? 'menang!' : 'kalah!';
+            } else if (player == 'semut') {
+                hasil = (computer == 'gajah') ? 'kalah!' : 'menang!';
+            } else {
+                hasil = 'memasukkan pilihan yang salah!';
+            }
+    
+            alert(`kamu memilih : ${player} dan computer memilih : ${computer} \nmaka hasilnya adalah kamu : ${hasil}`)
+            
+            tanya = confirm('lanjut lagi?')
+        }
+
+        alert('terima kasih')
+
+    </script>
+</body>
+</html>
